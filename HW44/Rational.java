@@ -11,7 +11,8 @@
  * comparison
  ******************************/
 
-// Andrew Shao
+// Team A Students
+// Andrew Shao and Aidan Griffon
 // APCS1 p1
 // HW44 -- implementing an interface, boolean short-circuiting
 // 2017-12-01f
