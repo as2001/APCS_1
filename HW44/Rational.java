@@ -11,8 +11,8 @@
  * comparison
  ******************************/
 
-// Clyde "Thluffy" Sinclair
-// APCS1 p0
+// Andrew Shao
+// APCS1 p1
 // HW44 -- implementing an interface, boolean short-circuiting
 // 2017-12-01f
 
