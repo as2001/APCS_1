@@ -1,3 +1,8 @@
+// Andrew Shao
+// APCS1 pd1
+// HW51 -- Selection
+// 2017-12-12T
+
 /***************************************
  * class SelectionSort -- implements SelectionSort algorithm
  ***************************************/
@@ -39,8 +44,19 @@ public class SelectionSort
   public static void selectionSortV( ArrayList<Comparable> data ) 
   {
     /* YOUR IMPLEMENTATION HERE */
-      for( int passCtr = 1; passCtr < data.size(); passCtr ++ ) {
-      }
+	Comparable smallest;
+	int smallestIndex = 0;
+	for( int passCtr = 0; passCtr < data.size() - 1; passCtr ++ ) {
+		smallest = data.get(passCtr);
+		smallestIndex = passCtr;
+		for( int index = data.size() - 1; index > passCtr; index -- ) {
+			if ( data.get(index).compareTo(smallest) < 0 ) {
+				smallest = data.get(index);
+				smallestIndex = index;
+			}
+		}
+		data.set( smallestIndex, data.set( passCtr, smallest ) );
+	}
   }//end selectionSortV
 
 
@@ -51,20 +67,16 @@ public class SelectionSort
     selectionSort( ArrayList<Comparable> input ) 
   {
     /* YOUR IMPLEMENTATION HERE */
+	ArrayList<Comparable> retArr = new ArrayList<Comparable>();
+	for( Comparable val: input )
+		retArr.add( val );
+	selectionSortV(retArr);
+	return retArr;
   }//end selectionSort 
 
 
   public static void main( String [] args ) 
   {
-    ArrayList glen = new ArrayList<Integer>();
-    glen.add(7);
-    glen.add(1);
-    glen.add(5);
-    glen.add(12);
-    glen.add(3);
-    System.out.println( "ArrayList glen before sorting:\n" + glen );
-    selectionSortV(glen);
-    System.out.println( "ArrayList glen after sorting:\n" + glen );
 
     /*===============for VOID methods=============
       ArrayList coco = populate( 10, 1, 1000 );
@@ -72,8 +84,7 @@ public class SelectionSort
       selectionSortV(coco);
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       ============================================*/
-
-    /*==========for AL-returning methods==========
+	  
     	ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
       glen.add(1);
@@ -93,6 +104,7 @@ public class SelectionSort
       + cocoSorted );
       System.out.println( "ArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+    /*==========for AL-returning methods==========	  
       ============================================*/
 
   }//end main
