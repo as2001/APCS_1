@@ -1,3 +1,8 @@
+//Andrew Shao
+//APCS1 pd1
+//HW55 -- Never Fear, Big Oh is Here!
+//2017-12-15F
+
 /********************************
  * class OrderedArrayList
  * wrapper class for ArrayList.
@@ -53,6 +58,10 @@ public class OrderedArrayList
    * maintains ascending order of elements
    * uses a linear search to find appropriate index
    ***/
+   //Execution time for ArrayList of size n: O(n) (linear)
+   //Best case: appropriate index is 0 
+   //Worst case: appropriate index is n-1
+   //add utilizes linear search
   public void add( Comparable newVal )
   { 
     for( int p = 0; p < _data.size(); p++ ) {
@@ -73,6 +82,10 @@ public class OrderedArrayList
    * maintains ascending order of elements
    * uses a binary search to find appropriate index
    ***/
+   //Execution time for ArrayList of size n: O(log2(n)) (logarithimic)
+   //Best case: appropriate index is (n-1)/2
+   //Worst case: appropriate index is 0,((n-1)/2)-1,((n-1)/2)+1, or n-1
+   //addBin utilizes binary search
   public void addBin( Comparable newVal ) { 
     //initialize upperbound, lowerbound and median
     int lo = 0;

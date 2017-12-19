@@ -1,3 +1,10 @@
+/***
+	Andrew Shao
+	APCS1 pd1
+	HW56 -- His Toe Grammar
+	2017-12-19T
+***/
+
 /*====================================================================
   An AP-style question, for practice:
   Write the StatPrinter class below. The StatPrinter Object receives an
